@@ -7,6 +7,10 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+theme = "zola-clean-blog"
+
+description = "A podcast covering MCDM, the MCDM community, and whatever else MCDM related."
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -14,3 +18,5 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+author = "Jon de Nor"
+clean_blog_menu = []

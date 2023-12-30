@@ -1,0 +1,45 @@
+{% extends "zola-clean-blog/templates/index.html" %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div id='buzzsprout-large-player'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/2277319.js?container_id=buzzsprout-large-player&player=large'></script>
+
+            <div class="posts">
+                {% for page in paginator.pages %}
+                <div class="post-preview">
+                    {{ post_macros::page_title(page=page) }}
+                    <p class="post-summary">{{ page.summary | safe }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Paginator -->
+            <div class="clearfix">
+                {% if paginator.previous %}
+                <a class="btn btn-primary float-left" href="{{ paginator.previous }}"> &larr; Newer Posts</a>
+                {% endif %}
+                {% if paginator.next %}
+                <a class="btn btn-primary float-right" href="{{ paginator.next }}">Older Posts &rarr;</a>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block copyright %}
+<p><a property="dct:title"
+      rel="cc:attributionURL"
+      href="https://goblinpoints.com">Goblin
+    Points</a> by <span property="cc:attributionName">Jon de Nor</span> is licensed under <a
+        href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+        rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img
+        style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img
+        style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+{% endblock copyright %}
