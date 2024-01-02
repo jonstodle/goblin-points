@@ -1,6 +1,6 @@
 +++
 title = "December 2023"
-date = 2024-01-03
+date = 2024-01-02
 
 [extra]
 season = 2024
