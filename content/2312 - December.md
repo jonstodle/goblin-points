@@ -4,7 +4,7 @@ date = 2024-01-02
 
 [extra]
 season = 2024
-episode = 01
+episode = 1
 +++
 # Intro
 Velkommen! I'm Jon de Nor and this is Goblin Points - a podcast covering MCDM, the MCDM community, and whatever else MCDM related.
