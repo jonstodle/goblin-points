@@ -9,6 +9,7 @@ build_search_index = true
 
 theme = "zola-clean-blog"
 
+title = "Goblin Points"
 description = "A podcast covering MCDM, the MCDM community, and whatever else MCDM related."
 
 generate_feed = true
