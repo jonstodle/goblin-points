@@ -313,8 +313,8 @@ Until next time. Snakkes.
 	- [Timescape Retainers Part V: Celestial Court](https://www.reddit.com/r/mattcolville/comments/18gn44i/timescape_retainers_part_v_celestial_court/) by Colonel17
 	- [Timescape Retainers Part VI: The World Below](https://www.reddit.com/r/mattcolville/comments/18m44t5/timescape_retainers_part_vi_the_world_below/) by Colonel17
 	- [Timescape Retainers Part VII: Axiom](https://www.reddit.com/r/mattcolville/comments/18s3uoe/timescape_retainers_part_vii_axiom/) by Colonel17
-	- [Cetus Beastheart companion](https://www.reddit.com/r/mattcolville/comments/18cb4xj/cetus_fantasy_plesiosaurus_loch_ness_monster/?utm_source=share&utm_medium=web2x&context=3) by Colonel17
-	- [Flee Mortals CR calculator by Gavinwadz](https://www.reddit.com/r/mattcolville/comments/187pu8g/i_made_a_cr_calculator_encounter_builder_for_flee/?utm_source=share&utm_medium=web2x&context=3) by FathomlessSeer
+	- [Cetus Beastheart companion](https://www.reddit.com/r/mattcolville/comments/18cb4xj/cetus_fantasy_plesiosaurus_loch_ness_monster/?utm_source=share&utm_medium=web2x&context=3) by FathomlessSeer
+	- [Flee Mortals CR calculator](https://www.reddit.com/r/mattcolville/comments/187pu8g/i_made_a_cr_calculator_encounter_builder_for_flee/?utm_source=share&utm_medium=web2x&context=3) by Gavinwadz
 	- [Wyverns and Leviathans](https://docs.google.com/document/d/1_J3AgUKjGgDMF48tBaAPGuuSWVfUy9Jn42NUu9H2BK4/edit#heading=h.u6o5jt9r2t77) by HarmonicHewell
 	- [Racial Reworks](https://www.gmbinder.com/share/-NBeLEBaCKWNLH82EKAU) by Roy Sauce
 	- [The Iconoclast](https://homebrewery.naturalcrit.com/share/htivFg-keIVn) by erant91
