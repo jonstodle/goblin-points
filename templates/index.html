@@ -1,5 +1,9 @@
 {% extends "zola-clean-blog/templates/index.html" %}
 
+{% block analytics %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+{% endblock analytics %}
+
 {% block content %}
 <!-- Main Content -->
 <div class="container">

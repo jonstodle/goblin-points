@@ -11,6 +11,9 @@ theme = "zola-clean-blog"
 
 description = "A podcast covering MCDM, the MCDM community, and whatever else MCDM related."
 
+generate_feed = true
+feed_filename = "rss.xml"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
