@@ -1,6 +1,7 @@
 +++
 title = "Roundup"
 date = 2023-11-27
+authors = ["jon@goblinpoints.com (Jon de Nor)"]
 
 [extra]
 season = 2023

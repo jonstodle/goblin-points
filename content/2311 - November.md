@@ -1,6 +1,7 @@
 +++
 title = "November 2023"
 date = 2023-12-04
+authors = ["jon@goblinpoints.com (Jon de Nor)"]
 
 [extra]
 season = 2023

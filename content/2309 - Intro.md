@@ -1,6 +1,7 @@
 +++
 title = "Intro"
 date = 2023-11-20
+authors = ["jon@goblinpoints.com (Jon de Nor)"]
 
 [extra]
 season = 2023
