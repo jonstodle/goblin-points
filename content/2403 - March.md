@@ -1,5 +1,5 @@
 +++
-title = "Marc 2024"
+title = "March 2024"
 date = 2024-04-05
 authors = ["jon@goblinpoints.com (Jon de Nor)"]
 
