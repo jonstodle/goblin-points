@@ -1,5 +1,5 @@
 +++
-title = "February 2024"
+title = "Negotiation, and Language & Literacy | February Roundup"
 date = 2024-03-04
 authors = ["jon@goblinpoints.com (Jon de Nor)"]
 

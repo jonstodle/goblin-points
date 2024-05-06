@@ -1,5 +1,5 @@
 +++
-title = "January 2024"
+title = "Post-Crowdfunding Campaign | January Roundup"
 date = 2024-02-06
 authors = ["jon@goblinpoints.com (Jon de Nor)"]
 

@@ -1,5 +1,5 @@
 +++
-title = "November 2023"
+title = "The Talent, The RPG, and the Revised Illrigger | November Roundup"
 date = 2023-12-04
 authors = ["jon@goblinpoints.com (Jon de Nor)"]
 
