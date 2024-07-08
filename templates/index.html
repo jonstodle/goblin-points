@@ -1,49 +1,110 @@
-{% extends "zola-clean-blog/templates/index.html" %}
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-800">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{config.description}}">
+    <meta name="author" content="{{config.extra.author}}">
 
-{% block analytics %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
-{% endblock analytics %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link href="/css/styles.css" rel=" stylesheet" type="text/css">
+
+    <style>
+        body {
+            --logo-height: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="flex justify-center px-4 py-8 top-0 sticky bg-black">
+    <a href="/" title="home">
+        <img src="/img/goblin-points.png" alt="Goblin Points" class="h-[--logo-height] transition-all">
+    </a>
+</nav>
 
 {% block content %}
 <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <div id='buzzsprout-large-player'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/2277319.js?container_id=buzzsprout-large-player&player=large'></script>
-
-            <div class="posts">
-                {% for page in paginator.pages %}
-                <div class="post-preview">
-                    {{ post_macros::page_title(page=page) }}
-                    <p class="post-summary">{{ page.summary | safe }}</p>
-                </div>
-                {% endfor %}
-            </div>
-
-            <!-- Paginator -->
-            <div class="clearfix">
-                {% if paginator.previous %}
-                <a class="btn btn-primary float-left" href="{{ paginator.previous }}"> &larr; Newer Posts</a>
-                {% endif %}
-                {% if paginator.next %}
-                <a class="btn btn-primary float-right" href="{{ paginator.next }}">Older Posts &rarr;</a>
-                {% endif %}
-            </div>
-
+<main class="space-y-16">
+    <div class="px-4 mt-16 flex justify-center">
+        <div class="w-full xl:w-content">
+            <div id='buzzsprout-large-player'></div>
+            <script type='text/javascript' charset='utf-8'
+                    src='https://www.buzzsprout.com/2277319.js?container_id=buzzsprout-large-player&player=large'></script>
         </div>
     </div>
-</div>
+
+    <div class="px-4 flex justify-center">
+        <div class="w-full xl:w-content">
+            <div class="prose prose-invert max-w-none xl:prose-lg prose-a:no-underline space-y-24">
+                {% for page in paginator.pages %}
+                <article>
+                    <span class="post-meta">Published on {{ page.date | date(format="%e %B %Y")}}</span>
+                    <a href="{{ page.permalink }}">
+                        <h2 class="!mt-0">{{ page.title }}</h2>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Paginator -->
+    <div class="px-4 flex justify-center">
+        <div class="flex justify-between prose prose-invert max-w-none xl:prose-lg prose-a:no-underline w-full xl:w-content">
+            {% if paginator.previous %}
+            <a class="" href="{{ paginator.previous }}"> &larr; Newer Posts</a>
+            {% else %}
+            <span></span>
+            {% endif %}
+            {% if paginator.next %}
+            <a class="" href="{{ paginator.next }}">Older Posts &rarr;</a>
+            {% else %}
+            <span></span>
+            {% endif %}
+        </div>
+    </div>
+</main>
 {% endblock content %}
 
-{% block copyright %}
-<p><a property="dct:title"
-      rel="cc:attributionURL"
-      href="https://goblinpoints.com">Goblin
-    Points</a> by <span property="cc:attributionName">Jon de Nor</span> is licensed under <a
-        href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
-        rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img
-        style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img
-        style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
-{% endblock copyright %}
+<!-- Footer -->
+<footer class="bg-black mt-16">
+    <p class="prose prose-invert prose-sm max-w-none text-center">
+        <a property="dct:title"
+           rel="cc:attributionURL"
+           href="https://goblinpoints.com">
+            Goblin Points
+        </a>
+        by <span property="cc:attributionName">Jon de Nor</span> is licensed under
+        <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+           rel="license noopener noreferrer" class="inline-flex items-center">
+            CC BY 4.0
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                 src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                 src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+        </a>
+    </p>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            document.body.style.setProperty('--logo-height', '5vh');
+        } else {
+            document.body.style.setProperty('--logo-height', '10vh');
+        }
+    })
+</script>
+
+<!--- Additional scripts -->
+{% block extrascripts %}
+{% endblock extrasripts %}
+</body>
+
+</html>

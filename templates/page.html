@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+<!-- Post Content -->
+<div class="flex justify-center px-4">
+    <div class="space-y-16 pt-16">
+        <div class="prose prose-invert xl:prose-lg">
+            <div class="flex justify-between">
+                <span>Episode {{page.extra.season}}.{{page.extra.episode}}</span>
+                <span class="meta">Published on {{ page.date | date(format="%e %B %Y")}}</span>
+            </div>
+            <h1>{{ page.title }}</h1>
+        </div>
+
+        {% if page.extra.episode_url %}
+        <div id="buzzsprout-player"></div>
+        <script src="{{page.extra.episode_url}}.js?container_id=buzzsprout-player&player=small"
+                type="text/javascript" charset="utf-8"></script>
+        {% endif %}
+
+        <main class="prose prose-invert xl:prose-lg prose-h1:mt-16">
+            {{ page.content | safe }}
+        </main>
+    </div>
+</div>
+{% endblock content %}
