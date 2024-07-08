@@ -73,8 +73,14 @@
 {% endblock content %}
 
 <!-- Footer -->
-<footer class="bg-black mt-16">
-    <p class="prose prose-invert prose-sm max-w-none text-center">
+<footer class="bg-black mt-16 p-4 flex flex-col md:flex-row justify-around items-center">
+    <p class="prose prose-invert prose-sm">
+        <a href="/rss.xml" title="RSS Feed">
+            RSS Feed
+        </a>
+    </p>
+
+    <p class="prose prose-invert prose-sm">
         <a property="dct:title"
            rel="cc:attributionURL"
            href="https://goblinpoints.com">
