@@ -6,7 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2024
 episode = 3
-episode_slug = "14826624-the-power-roll-and-language-research-march-roundup"
+episode_id = "14826624"
 +++
 
 # Intro

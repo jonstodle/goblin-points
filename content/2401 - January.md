@@ -6,7 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2024
 episode = 1
-episode_slug = "14445904-post-crowdfunding-campaign-january-roundup"
+episode_id = "14445904"
 +++
 
 # Intro

@@ -6,7 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2023
 episode = 11
-episode_slug = "14081060-the-talent-the-rpg-and-the-revised-illrigger-november-roundup"
+episode_id = "14081060"
 +++
 Velkommen! I'm Jon de Nor and this is Goblin Points - a podcast covering MCDM, the MCDM community, and whatever else MCDM related.
 

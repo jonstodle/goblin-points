@@ -6,7 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2023
 episode = 12
-episode_slug = "14241215-crowdfunding-campaign-galore-december-roundup"
+episode_id = "14241215"
 +++
 # Intro
 Velkommen! I'm Jon de Nor and this is Goblin Points - a podcast covering MCDM, the MCDM community, and whatever else MCDM related.
