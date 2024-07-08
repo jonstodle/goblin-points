@@ -6,6 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2023
 episode = 10
+episode_slug = "14037848-when-last-we-left-our-heroes"
 +++
 Velkommen! I'm Jon de Nor and this is Goblin Points - a podcast covering MCDM, the MCDM community, and whatever else MCDM related.
 

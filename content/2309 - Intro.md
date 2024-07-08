@@ -6,6 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2023
 episode = 9
+episode_slug = "14000330-intro"
 +++
 Velkommen! I'm Jon de Nor and this is Goblin Points - a podcast covering MCDM, the MCDM community, and whatever else MCDM related.
 

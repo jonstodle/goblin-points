@@ -6,6 +6,7 @@ authors = ["jon@goblinpoints.com (Jon de Nor)"]
 [extra]
 season = 2024
 episode = 2
+episode_slug = "14621256-negotiation-and-language-literacy-february-roundup"
 +++
 
 # Intro
