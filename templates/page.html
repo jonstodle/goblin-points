@@ -18,6 +18,10 @@
                 type="text/javascript" charset="utf-8"></script>
         {% endif %}
 
+        {% if page.content is containing("Links") %}
+        <a href="#links" class="block text-center prose prose-invert max-w-none">Jump to links &downarrow;</a>
+        {% endif %}
+
         <main class="prose prose-invert xl:prose-lg prose-h1:mt-16">
             {{ page.content | safe }}
         </main>
