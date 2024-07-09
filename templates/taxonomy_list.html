@@ -1,5 +1,7 @@
 {% extends "index.html" %}
 
+{% block title %}{{ taxonomy.name | replace(from="-", to=" ") | title }} | {{ config.title }}{% endblock title %}
+
 {% block content %}
 <!-- Post Content -->
 <div class="px-4 mt-16 flex justify-center">
