@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+<!-- Post Content -->
+<div class="px-4 mt-16 flex justify-center">
+    <div class="w-full xl:w-content">
+        <div class="prose prose-invert max-w-none xl:prose-lg prose-a:no-underline space-y-24">
+            <h1>{{ taxonomy.name | replace(from="-", to=" ") | title }}</h1>
+
+            <div class="flex flex-wrap gap-8">
+                {% for term in terms %}
+                <a href="{{ term.permalink }}" class="block">
+                    <article class="size-56 flex flex-col justify-center items-center text-center rounded-3xl bg-gray-900 hover:shadow-xl hover:shadow-gray-950 transition-shadow">
+                        <h2 class="!my-0">{{ term.name | title }}</h2>
+                        <span>{{ term.pages | length }} episodes</span>
+                    </article>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

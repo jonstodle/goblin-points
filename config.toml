@@ -16,8 +16,8 @@ generate_feed = true
 feed_filename = "rss.xml"
 
 taxonomies = [
-    { name = "season", feed = false, render = false },
-    { name = "episode-type", feed = false, render = false },
+    { name = "season", feed = false },
+    { name = "episode-type", feed = false },
 ]
 
 [markdown]

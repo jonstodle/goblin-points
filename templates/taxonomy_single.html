@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block content %}
+<!-- Post Content -->
+<div class="px-4 mt-16 flex justify-center">
+    <div class="w-full xl:w-content">
+        <div class="prose prose-invert max-w-none xl:prose-lg prose-a:no-underline space-y-24">
+            <div>
+            <h1 class="!mb-0">{{ term.name | title }}</h1>
+                <span>{{ term.pages | length }} episodes</span>
+            </div>
+
+            {% for page in term.pages %}
+            <article>
+                <span class="post-meta">Published on {{ page.date | date(format="%e %B %Y")}}</span>
+                <a href="{{ page.permalink }}">
+                    <h2 class="!mt-0">{{ page.title }}</h2>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
