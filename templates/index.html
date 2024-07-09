@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{config.description}}">
-    <meta name="author" content="{{config.extra.author}}">
+    <meta name="author" content="{{config.author}}">
 
     <link rel="icon" href="/img/goblin-points-square.jpg">
 
@@ -32,8 +32,9 @@
         <img src="/img/goblin-points.png" alt="Goblin Points" class="h-[--logo-height] mt-[--logo-margin] transition-all">
     </a>
     <div class="py-2 flex gap-4 prose prose-lg prose-invert prose-a:no-underline">
-        {{ macros::navigation_item(title="Interviews", link="/episode-type/interview", current_path=current_path) }}
-        {{ macros::navigation_item(title="Monthly Roundups", link="/episode-type/roundup", current_path=current_path) }}
+        {% for item in config.extra.navigation_items %}
+        <a href="{{ item.url }}" class="pb-1 pt-2 px-4 rounded border-2 border-gray-700 {% if current_path is containing(item.url) %} bg-gray-700 {% endif %} hover:bg-gray-700 block leading-none">{{ item.title }}</a>
+        {% endfor %}
     </div>
 </nav>
 
