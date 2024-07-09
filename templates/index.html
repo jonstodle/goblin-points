@@ -15,11 +15,16 @@
     <meta name="description" content="{{config.description}}">
     <meta name="author" content="{{config.author}}">
 
-    <meta property="og:title" content="{{title | default(value=config.title)}}">
+    <meta property="og:title" content="{{title}}">
     <meta property="og:description" content="{{config.description}}">
     <meta property="og:image" content="{{ get_url(path='img/goblin-points-banner.jpg') }}">
     <meta property="og:url" content="{{ current_url }}">
     <meta property="og:type" content="website">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{title}}">
+    <meta property="twitter:description" content="{{config.description}}">
+    <meta property="twitter:image" content="{{ get_url(path='img/goblin-points-banner.jpg') }}">
 
     <link rel="icon" href="/img/goblin-points-square.jpg">
 
