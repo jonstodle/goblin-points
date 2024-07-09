@@ -1,3 +1,5 @@
+{% import "macros.html" as macros %}
+
 <!DOCTYPE html>
 <html lang="en" class="bg-gray-800">
 <head>
@@ -17,6 +19,7 @@
     <style>
         body {
             --logo-height: 10vh;
+            --logo-margin: 1.5rem;
         }
     </style>
 </head>
@@ -24,10 +27,14 @@
 <body>
 
 <!-- Navigation -->
-<nav class="flex justify-center px-4 py-8 top-0 sticky bg-black">
+<nav class="flex flex-col gap-4 items-center px-4 py-2 top-0 sticky bg-black">
     <a href="/" title="home">
-        <img src="/img/goblin-points.png" alt="Goblin Points" class="h-[--logo-height] transition-all">
+        <img src="/img/goblin-points.png" alt="Goblin Points" class="h-[--logo-height] mt-[--logo-margin] transition-all">
     </a>
+    <div class="py-2 flex gap-4 prose prose-lg prose-invert prose-a:no-underline">
+        {{ macros::navigation_item(title="Interviews", link="/episode-type/interview", current_path=current_path) }}
+        {{ macros::navigation_item(title="Monthly Roundups", link="/episode-type/roundup", current_path=current_path) }}
+    </div>
 </nav>
 
 {% block content %}
@@ -88,8 +95,10 @@
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
             document.body.style.setProperty('--logo-height', '5vh');
+            document.body.style.setProperty('--logo-margin', '.5rem');
         } else {
             document.body.style.setProperty('--logo-height', '10vh');
+            document.body.style.setProperty('--logo-margin', '1.5rem');
         }
     })
 </script>
