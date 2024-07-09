@@ -12,8 +12,8 @@ build_search_index = true
 title = "Goblin Points"
 description = "A podcast covering MCDM, the MCDM community, and whatever else MCDM related."
 
-generate_feed = true
-feed_filename = "rss.xml"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 taxonomies = [
     { name = "season", feed = false },
