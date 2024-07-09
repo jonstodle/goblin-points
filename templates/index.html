@@ -57,7 +57,7 @@
             <div class="prose prose-invert max-w-none xl:prose-lg prose-a:no-underline space-y-24">
                 {% for page in section.pages %}
                 <article>
-                    <span class="post-meta">Published on {{ page.date | date(format="%e %B %Y")}}</span>
+                    <span class="post-meta">Published on {{ page.date | date(format='%e %B %Y')}}</span>
                     <a href="{{ page.permalink }}">
                         <h2 class="!mt-0">{{ page.title }}</h2>
                     </a>
