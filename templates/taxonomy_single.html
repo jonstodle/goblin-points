@@ -1,6 +1,8 @@
 {% extends "index.html" %}
 
-{% block title %}{{ term.name | title }} | {{ config.title }}{% endblock title %}
+{% block head_variables %}
+{% set title = term.name | title %}
+{% endblock head_variables %}
 
 {% block content %}
 <!-- Post Content -->

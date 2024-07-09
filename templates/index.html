@@ -3,19 +3,29 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-gray-800">
 <head>
+    {% block head_variables %}{% endblock head_variables %}
+    {% if title is defined %}
+    {% set title = title ~ " - " ~ config.title %}
+    {% else %}
+    {% set title = config.title %}
+    {% endif %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{config.description}}">
     <meta name="author" content="{{config.author}}">
 
-    <meta name="og:description" content="{{config.description}}">
-    <meta name="og:image" content="/img/goblin-points-banner.jpg">
+    <meta property="og:title" content="{{title | default(value=config.title)}}">
+    <meta property="og:description" content="{{config.description}}">
+    <meta property="og:image" content="{{ get_url(path='img/goblin-points-banner.jpg') }}">
+    <meta property="og:url" content="{{ current_url }}">
+    <meta property="og:type" content="website">
 
     <link rel="icon" href="/img/goblin-points-square.jpg">
 
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
 
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <title>{{ title | default(value=config.title) }}</title>
 
     <link href="/css/styles.css" rel=" stylesheet" type="text/css">
 
@@ -32,11 +42,14 @@
 <!-- Navigation -->
 <nav class="flex flex-col gap-4 items-center px-4 py-2 top-0 sticky bg-black">
     <a href="/" title="home">
-        <img src="/img/goblin-points.png" alt="Goblin Points" class="h-[--logo-height] mt-[--logo-margin] transition-all">
+        <img src="/img/goblin-points.png" alt="Goblin Points"
+             class="h-[--logo-height] mt-[--logo-margin] transition-all">
     </a>
     <div class="py-2 flex gap-4 prose prose-lg prose-invert prose-a:no-underline">
         {% for item in config.extra.navigation_items %}
-        <a href="{{ item.url }}" class="pb-1 pt-2 px-4 rounded border-2 border-gray-700 {% if current_path is containing(item.url) %} bg-gray-700 {% endif %} hover:bg-gray-700 block leading-none">{{ item.title }}</a>
+        <a href="{{ item.url }}"
+           class="pb-1 pt-2 px-4 rounded border-2 border-gray-700 {% if current_path is containing(item.url) %} bg-gray-700 {% endif %} hover:bg-gray-700 block leading-none">{{
+            item.title }}</a>
         {% endfor %}
     </div>
 </nav>

@@ -1,6 +1,8 @@
 {% extends "index.html" %}
 
-{% block title %}{{ taxonomy.name | replace(from="-", to=" ") | title }} | {{ config.title }}{% endblock title %}
+{% block head_variables %}
+{% set title = taxonomy.name | replace(from='-', to=' ') | title %}
+{% endblock head_variables %}
 
 {% block content %}
 <!-- Post Content -->
